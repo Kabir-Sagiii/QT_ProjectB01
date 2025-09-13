@@ -1,14 +1,32 @@
-import React from "react";
+import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Signin.css";
-function Signin() {
+import { signinService } from "../../services/signinService";
+function Signin({ setToken }) {
+  const emailRef = useRef(null);
+  const passwordRef = useRef(null);
+  const navigate = useNavigate();
   return (
     <div className="login-container">
       <div className="login-box">
-        <h2 style={{ marginBottom: "10px", color: "green" }}>Sign In Page</h2>
+        <h2 className="h4 text-primary" style={{ marginBottom: "10px" }}>
+          Sign In Page
+        </h2>
         <form className="login-form">
-          <input type="text" placeholder="Phone number, username, or email" />
-          <input type="password" placeholder="Password" />
-          <button type="submit">Log In</button>
+          <input ref={emailRef} type="text" placeholder="email" />
+          <input ref={passwordRef} type="password" placeholder="Password" />
+          <button
+            type="button"
+            onClick={() => {
+              var user = {
+                email: emailRef.current.value,
+                password: passwordRef.current.value,
+              };
+              signinService(user, navigate, setToken);
+            }}
+          >
+            Sign In
+          </button>
         </form>
         <div className="divider">OR</div>
         <button className="facebook-login">Log in with Facebook</button>

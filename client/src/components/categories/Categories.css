@@ -1,0 +1,13 @@
+.categories {
+  display: grid;
+  grid-template-rows: repeat(100px, 5);
+  height: 500px;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+.categories a {
+  color: white;
+  font-size: 21px;
+  text-decoration: none;
+}

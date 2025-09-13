@@ -1,0 +1,56 @@
+.navbar {
+  background-color: rgb(14, 1, 1);
+  height: 15vh;
+  display: grid;
+  grid-template-columns: 40% 40% 20%;
+  box-shadow: 0 0 10px red;
+}
+.brandName {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.brandName h1 {
+  font-size: 42px;
+  color: rgb(54, 234, 54);
+}
+.brandName h1:hover {
+  transform: scale(1.2);
+  color: green;
+}
+.menus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+.menus a {
+  margin-right: 50px;
+  text-decoration: none;
+  color: white;
+}
+.menus a:hover {
+  color: green;
+}
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icons button {
+  padding: 10px 30px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+.icons i {
+  font-size: 27px;
+  color: white;
+}
+.icons i:hover {
+  color: green;
+}

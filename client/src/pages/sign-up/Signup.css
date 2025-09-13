@@ -1,14 +1,9 @@
-body {
-  margin: 0;
-  font-family: "Roboto", sans-serif;
-  background-color: #f4f4f4;
-}
-
 .signup-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 90vh;
+  margin: auto;
 }
 
 .signup-box {

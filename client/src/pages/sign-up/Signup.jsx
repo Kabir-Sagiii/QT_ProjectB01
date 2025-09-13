@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./Signup.css";
 import { register } from "../../services/signupService";
+import { useNavigate } from "react-router-dom";
 function Signup() {
   const [newUser, setNewUser] = useState({
     name: "",
@@ -10,6 +11,8 @@ function Signup() {
     email: "",
     phone: "",
   });
+
+  const navigate = useNavigate();
 
   function getData(event) {
     // {name:"",-----,name:"sagar"}
@@ -23,7 +26,7 @@ function Signup() {
   return (
     <div className="signup-container">
       <div className="signup-box">
-        <h2 style={{ color: "green" }}>Sign Up</h2>
+        <h2 className="h4 text-primary">Sign Up</h2>
         <form className="signup-form">
           <input
             value={newUser.name}
@@ -94,7 +97,7 @@ function Signup() {
           <button
             type="button"
             onClick={() => {
-              register(newUser);
+              register(newUser, navigate);
             }}
           >
             Register
